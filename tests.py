@@ -37,6 +37,12 @@ class TestsRodCutter(unittest.TestCase):
         self.based_rod_cutting(self.cutter.bottom_up_cut_rod)
         self.based_cut_road(self.cutter.bottom_up_cut_rod)
 
+    def test_solution_of_rod(self):
+        self.assertEqual(list(self.cutter.solution_of_rod(1)), [1])
+        self.assertEqual(list(self.cutter.solution_of_rod(8)), [2, 6])
+        self.assertEqual(list(self.cutter.solution_of_rod(9)), [3, 6])
+        self.assertEqual(list(self.cutter.solution_of_rod(10)), [10])
+
 
 if __name__ == "__main__":
     unittest.main()
